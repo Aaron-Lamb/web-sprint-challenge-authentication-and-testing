@@ -11,8 +11,8 @@ function restrict(){
         })
       }
 
-      jwt.verify(token, process.env.TOKEN, (error, decoded) => {
-        if(error){
+      jwt.verify(token, process.env.TOKEN, (err, decoded) => {
+        if(err){
           return res.status(401).json({
             message: "You shall not pass"
           })
